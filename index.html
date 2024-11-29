@@ -43,7 +43,7 @@
             <script>
             function openModal() {
               // Set the iframe src to the Google Calendar scheduling link
-              var iframe = document.getElementById("calendarIframe");
+              let iframe = document.getElementById("calendarIframe");
               iframe.src = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ00WTGOxkfiLQGQUIwHH2o7K-V6uiXhg9HAQ1NzaeFkP5O6ex53vVvLH5cigTn_MR1lmrkJqkP5?gv=true";
               
               // Show the modal
@@ -53,7 +53,7 @@
             function closeModal() {
               // Close the modal and clear the iframe content
               document.getElementById("myModal").style.display = "none";
-              var iframe = document.getElementById("calendarIframe");
+              let iframe = document.getElementById("calendarIframe");
               iframe.src = "about:blank"; // Clear iframe content when closing the modal
             }
             
