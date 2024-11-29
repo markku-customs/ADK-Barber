@@ -30,7 +30,40 @@
         <div class="content text-container" style="position: relative;">
           <p class="description">
             Uusia aikoja saatavilla sunnuntaisin, ja pyydämme ilmoittamaan peruutuksista hyvissä ajoin.</p>
-          <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ00WTGOxkfiLQGQUIwHH2o7K-V6uiXhg9HAQ1NzaeFkP5O6ex53vVvLH5cigTn_MR1lmrkJqkP5?gv=true" class="button">Ajanvaraus</a>
+            <a href="#" class="button" onclick="openModal()">Ajanvaraus</a>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <iframe id="calendarIframe" src="about:blank" frameborder="0" width="100%" height="400px"></iframe>
+              </div>
+            </div>
+
+            <script>
+            function openModal() {
+              // Set the iframe src to the Google Calendar scheduling link
+              var iframe = document.getElementById("calendarIframe");
+              iframe.src = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ00WTGOxkfiLQGQUIwHH2o7K-V6uiXhg9HAQ1NzaeFkP5O6ex53vVvLH5cigTn_MR1lmrkJqkP5?gv=true";
+              
+              // Show the modal
+              document.getElementById("myModal").style.display = "block";
+            }
+            
+            function closeModal() {
+              // Close the modal and clear the iframe content
+              document.getElementById("myModal").style.display = "none";
+              var iframe = document.getElementById("calendarIframe");
+              iframe.src = "about:blank"; // Clear iframe content when closing the modal
+            }
+            
+            // Close modal if clicked outside of the modal content
+            window.onclick = function(event) {
+              if (event.target == document.getElementById("myModal")) {
+                closeModal();
+              }
+            }
+          </script>
         </div>
         
       </main>    
