@@ -78,6 +78,13 @@ body {
   top: 150px;
 }
 
+.screen-reader-only {
+  position: absolute;   
+  left: -9999px;        
+  width: 1px;             
+  height: 1px;           
+}
+
 /* Ajanvaraus-nappi */
 .button {
   position: relative;
